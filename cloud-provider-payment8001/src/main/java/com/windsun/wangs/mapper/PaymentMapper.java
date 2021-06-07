@@ -4,6 +4,8 @@ import com.windsun.wangs.entry.Payment;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 /**
  * 项目名称：springcloud
  * 类 名 称：PaymentMapper
@@ -14,8 +16,10 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface PaymentMapper {
 
-    public int create(Payment payment);
+     int create(Payment payment);
 
-    public Payment getPaymentById(@Param("id") Long id);
+     Payment getPaymentById(@Param("id") Long id);
+
+     List<Payment> paymentList();
 
 }

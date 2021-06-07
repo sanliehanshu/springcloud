@@ -15,4 +15,8 @@
         select * from payment where id=#{id};
     </select>
 
+    <select id="paymentList" resultType="com.windsun.wangs.entry.Payment">
+        select * from payment
+    </select>
+
 </mapper>
